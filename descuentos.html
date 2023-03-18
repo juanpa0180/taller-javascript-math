@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-
-    </style>
-    <title>Descuentos</title>
-</head>
-<body>
-    <h1>Descuentos</h1>
-
-    <label for="precio">Por favor inserte el precio inicial para aplicar el descuento correspondiente</label>
-    <input id="precio" type="number" placeholder="$"/>
-    <label for="descuento">Por favor inserte el descuento que se va a aplicar</label>
-    <input id="descuento" type="number" placeholder="%"/>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo calcular precios con descuentos</title>
+  </head>
+  <body>
+    <h1>Cómo calcular precios con descuentos</h1>
+    <label for="price">Precio original de tu producto:</label>
+    <input id="price" type="number" />
+    <label for="coupon">Cupón de descuento:</label>
+    <input id="coupon" type="text" />
     <button id="calcular">Calcular descuento</button>
-
-    <p id="resultado"></p>
-
-    <script src="descuentos.js"></script>
-</body>
+    <p id="result"></p>
+    <script src="./descuentos.js"></script>
+  </body>
 </html>
