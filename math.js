@@ -58,3 +58,27 @@ function calcularCirculo(radio){
 }
 
 console.groupEnd('Circulo')
+
+console.group('Altura triangulo')
+
+  function alturaTriIsosceles(lados, base){
+    if(lados!==base)
+    {
+      return {
+      altura: Math.sqrt((lados**2)-((base**2)/4)).toFixed(2)
+      }
+    } else
+    {
+      console.warn('Este no es u triángulo isosceles.')
+    }
+  }
+
+  function alturaTriEscaleno(a, b, c) {
+    
+    const x = (c**2 - a**2 + b**2) / (2 * b);
+    const h = Math.sqrt(c**2 - x**2);
+  
+    return h;
+  }
+
+console.groupEnd('Altura triangulo')
