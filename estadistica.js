@@ -30,7 +30,15 @@ function calcularModa(lista){
         }
     }
 
-    console.log(listaCount)
+    
+    const listaArray = Object.entries(listaCount);
+    const listaOrdenada = ordenarListaBidimensional(listaArray, 1);
+    const listaMaxNumber = listaOrdenada[listaOrdenada.length-1];
+
+    //console.log(listaCount, listaArray, listaOrdenada, listaMaxNumber);
+    console.log('La moda es: '+listaMaxNumber[0]);
+    const moda = listaMaxNumber[0];
+    return moda;
 
     /*MI CÓDIGO
     const nuevaLista = lista.sort((a,b) => a-b);
@@ -58,3 +66,19 @@ function calcularModa(lista){
     console.log(repetido);
     return repetido;*/
 }
+
+function ordenarLista(listaDesordenada){
+    function ordenarListaSort(valorAcumulado,nuevoValor)
+        {
+            return valorAcumulado-nuevoValor;
+        }
+    const lista=listaDesordenada.sort(ordenarListaSort);
+    return lista;
+}
+
+function ordenarListaBidimensional(listaDesordenada,i){
+    function ordenarListaSort(valorAcumulado,nuevoValor){
+        return valorAcumulado[i]-nuevoValor[i];
+    }
+
+const lista=listaDesordenada.sort(ordenarListaSort);return lista;}
