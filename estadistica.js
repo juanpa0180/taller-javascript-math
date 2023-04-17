@@ -1,6 +1,6 @@
-const PlatziMath = {};
+const Estadistica = {};
 
-PlatziMath.calcularPromedio =function calcularPromedio(lista){
+Estadistica.calcularPromedio =function calcularPromedio(lista){
     const cantidad = lista.length;
     const suma = lista.reduce((a,e) => a+e, 0)
     console.log(suma/cantidad);
@@ -9,7 +9,7 @@ PlatziMath.calcularPromedio =function calcularPromedio(lista){
 
 //const esPar = (lista) => lista.length%2===0?false:true;
 
-PlatziMath.calcularMediana =function calcularMediana(lista){
+Estadistica.calcularMediana =function calcularMediana(lista){
     const nuevaLista  = lista.sort((a, b) => a - b);
 
     if(nuevaLista.length%2===0){
@@ -19,7 +19,7 @@ PlatziMath.calcularMediana =function calcularMediana(lista){
     }
 }
 
-PlatziMath.calcularModa =function calcularModa(lista){
+Estadistica.calcularModa =function calcularModa(lista){
     let listaCount = {};
 
     for (let i=0; i<lista.length; i++){
@@ -34,7 +34,7 @@ PlatziMath.calcularModa =function calcularModa(lista){
 
     
     const listaArray = Object.entries(listaCount);
-    const listaOrdenada = ordenarListaBidimensional(listaArray, 1);
+    const listaOrdenada = Estadistica.ordenarListaBidimensional(listaArray, 1);
     const listaMaxNumber = listaOrdenada[listaOrdenada.length-1];
 
     //console.log(listaCount, listaArray, listaOrdenada, listaMaxNumber);
@@ -69,7 +69,7 @@ PlatziMath.calcularModa =function calcularModa(lista){
     return repetido;*/
 }
 
-PlatziMath.ordenarLista = function ordenarLista(listaDesordenada){
+Estadistica.ordenarLista = function ordenarLista(listaDesordenada){
     function ordenarListaSort(valorAcumulado,nuevoValor)
         {
             return valorAcumulado-nuevoValor;
@@ -78,7 +78,7 @@ PlatziMath.ordenarLista = function ordenarLista(listaDesordenada){
     return lista;
 }
 
-PlatziMath.ordenarListaBidimensional = function ordenarListaBidimensional(listaDesordenada,i){
+Estadistica.ordenarListaBidimensional = function ordenarListaBidimensional(listaDesordenada,i){
     function ordenarListaSort(valorAcumulado,nuevoValor){
         return valorAcumulado[i]-nuevoValor[i];
     }
